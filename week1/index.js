@@ -52,7 +52,7 @@ let greenLightTime = 28;
 let motorbikeCount = 8;
 // 4.3. Alex 望向天空，看到天上有 5 朵白雲和 1 顆太陽
 let cloudCount = 5;
-let sunCount = 1;
+const sunCount = 1;
 
 // ### 題目六：情境題：簡單變數計算
 // 情境：Alex 每天都會帶著 2000cc 的水壺
@@ -79,22 +79,24 @@ console.log(`Alex 的水壺還有 ${myWater}cc 的水`);
 let totalBill = 0;
 const machineUsePrice = 50;
 const groupClassesPrice = 150;
-const machineUsePriceTotal = machineUsePrice * 3;
-const groupClassesTotal = groupClassesPrice * 2;
-const total = totalBill + machineUsePriceTotal + groupClassesTotal;
+let machineUseCount = 3;
+let groupClassesCount = 2;
+const machineUsePriceTotal = machineUsePrice * machineUseCount;
+const groupClassesTotal = groupClassesPrice * groupClassesCount;
+const totalBill = totalBill + machineUsePriceTotal + groupClassesTotal;
 console.log(
-  `Anna 本週器械使用費共 ${machineUsePriceTotal} 元，團體課費用共 ${groupClassesTotal} 元，一共消費金額是 ${total}元`
+  `Anna 本週器械使用費共 ${machineUsePriceTotal} 元，團體課費用共 ${groupClassesTotal} 元，一共消費金額是 ${totalBill}元`
 );
 
 // ### 題目八：變數重新賦予值
 // 情境：請依照以下程式碼告知答案是多少，並在下方用註解方式寫上這五行程式碼做了什麼事
 // 以下程式碼請勿變更
 let a = 8; // 範例：宣告了一個 a 的變數，並賦予了一個 8 的數字型別
-let b = 0;
-a = 13;
-a = b + 4;
-a - b;
-b += 1;
+let b = 0; // 宣告了一個 b 的變數，並賦予了一個 0 的數字型別
+a = 13; // a 重新賦予了一個 13 的數字型別
+a = b + 4; // a 重新賦予了 b + 4 的數字型別
+a - b; // a - b 的數字型別
+b += 1; // b 重新賦予了 b + 1 的數字型別 b=1
 
 // ### 題目九：型別查詢
 // 請不要觀看 console.log，透過註解告知解答每個變數的型別
